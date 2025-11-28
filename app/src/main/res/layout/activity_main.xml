@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/darker_gray"
+        android:gravity="end|center_vertical"
+        android:padding="12dp"
+        android:text="@string/_0"
+        android:textSize="40sp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnMC"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mc" />
+
+        <Button
+            android:id="@+id/btnMR"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mr" />
+
+        <Button
+            android:id="@+id/btnMS"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ms" />
+
+        <Button
+            android:id="@+id/btnMPlus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/m" />
+
+        <Button
+            android:id="@+id/btnMMinus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/mMINUS" />
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:rowCount="6">
+
+        <Button
+            android:id="@+id/btnPercent"
+            android:text="@string/porcentaje" />
+
+        <Button
+            android:id="@+id/btnCE"
+            android:text="@string/ce" />
+
+        <Button
+            android:id="@+id/btnC"
+            android:text="@string/c" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            android:text="@string/division" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:text="@string/_7" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:text="@string/_8" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:text="@string/_9" />
+
+        <Button
+            android:id="@+id/btnMul"
+            android:text="@string/multiplication" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:text="@string/_4" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:text="@string/_5" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:text="@string/_6" />
+
+        <Button
+            android:id="@+id/btnMinus"
+            android:text="@string/minus" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:text="@string/_1" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:text="@string/_2" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:text="@string/_3" />
+
+        <Button
+            android:id="@+id/btnPlus"
+            android:text="@string/plus" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_columnSpan="2"
+            android:layout_gravity="fill"
+            android:text="@string/_0" />
+
+        <Button
+            android:id="@+id/btnDot"
+            android:text="@string/punto" />
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:text="@string/equals" />
+
+    </GridLayout>
+</LinearLayout>
+
+
