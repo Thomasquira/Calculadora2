@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btnPercent).setOnClickListener(v -> porcentaje());
 
 
+
         findViewById(R.id.btnMS).setOnClickListener(v -> memoriaStore());
         findViewById(R.id.btnMR).setOnClickListener(v -> memoriaRecall());
         findViewById(R.id.btnMC).setOnClickListener(v -> memoriaClear());
@@ -94,12 +95,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void seleccionarOperacion(String op) {
-        if (numeroActual.isEmpty()) return;
+        if (numeroActual.isEmpty()) {
+            operador = op;
+            return;
+        }
+
+        if (!operador.isEmpty()) {
+            calcular();
+        }
+
         numero1 = Double.parseDouble(numeroActual);
         operador = op;
-        operadorSeleccionado = true;
         numeroActual = "";
     }
+
 
     public void calcular() {
         if (operador.isEmpty() || numeroActual.isEmpty()) return;
@@ -126,6 +135,10 @@ public class MainActivity extends AppCompatActivity {
                 }
                 resultado = numero1 / numero2;
                 break;
+
+            case "%":
+                resultado = numero1 % numero2;
+                break;
         }
 
         mostrarResultado(resultado);
@@ -143,14 +156,17 @@ public class MainActivity extends AppCompatActivity {
         txtResultado.setText(numeroActual);
     }
 
+
     public void mostrarResultado(double resultado) {
         if (resultado == (long) resultado) {
             txtResultado.setText(String.valueOf((long) resultado));
+            numeroActual = String.valueOf((long) resultado);
         } else {
             txtResultado.setText(String.valueOf(resultado));
-            numeroActual = String.valueOf((long) resultado);
+            numeroActual = String.valueOf(resultado);
         }
     }
+
 
     public void memoriaStore() {
         memoria = Double.parseDouble(txtResultado.getText().toString());
